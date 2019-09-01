@@ -7,7 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using NLog.Extensions.Logging;
+using NLog.Web;
 using System;
 using System.Text;
 namespace CaptaTecnologia.WebApi
@@ -67,7 +70,7 @@ namespace CaptaTecnologia.WebApi
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -78,6 +81,15 @@ namespace CaptaTecnologia.WebApi
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            //add NLog to .NET Core
+            loggerFactory.AddNLog();
+
+            //Enable ASP.NET Core features (NLog.web) - only needed for ASP.NET Core users
+            app.AddNLogWeb();
+
+            //needed for non-NETSTANDARD platforms: configure nlog.config in your project root. NB: you need NLog.Web.AspNetCore package for this. 
+            env.ConfigureNLog("nlog.config");
 
             app.UseCors(builder => builder
                 .AllowAnyOrigin()

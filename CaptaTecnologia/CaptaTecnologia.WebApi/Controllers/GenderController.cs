@@ -6,6 +6,7 @@ using CaptaTecnologia.Data.Repositories;
 using CaptaTecnologia.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace CaptaTecnologia.WebApi.Controllers
 {
@@ -15,9 +16,11 @@ namespace CaptaTecnologia.WebApi.Controllers
     public class GenderController : Controller
     {
         private readonly GenderRepository _repositoryGender;
+        private readonly ILogger<GenderController> _logger;
 
-        public GenderController(GenderRepository repositoryGender)
+        public GenderController(GenderRepository repositoryGender, ILogger<GenderController> logger)
         {
+            _logger = logger;
             _repositoryGender = repositoryGender;
         }
 
@@ -32,6 +35,7 @@ namespace CaptaTecnologia.WebApi.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 return BadRequest(ex.Message);
             }
         }

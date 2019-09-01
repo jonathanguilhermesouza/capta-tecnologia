@@ -3,6 +3,7 @@ using CaptaTecnologia.WebApi.Utils;
 using CaptaTecnologia.WebApi.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 
 namespace CaptaTecnologia.WebApi.Controllers
@@ -13,9 +14,11 @@ namespace CaptaTecnologia.WebApi.Controllers
     {
         private readonly UserRepository _repositoryUser;
         private readonly IConfiguration _configuration;
+        private readonly ILogger<AccountController> _logger;
 
-        public AccountController(UserRepository repositoryUser, IConfiguration configuration)
+        public AccountController(UserRepository repositoryUser, IConfiguration configuration, ILogger<AccountController> logger)
         {
+            _logger = logger;
             _configuration = configuration;
             _repositoryUser = repositoryUser;
         }
@@ -38,6 +41,7 @@ namespace CaptaTecnologia.WebApi.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 return BadRequest(new { message = ex.Message });
             }
         }

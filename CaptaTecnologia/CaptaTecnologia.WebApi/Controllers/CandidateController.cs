@@ -2,6 +2,7 @@
 using CaptaTecnologia.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 
@@ -13,9 +14,11 @@ namespace CaptaTecnologia.WebApi.Controllers
     public class CandidateController : ControllerBase
     {
         private readonly CandidateRepository _repositoryCandidate;
+        private readonly ILogger<CandidateController> _logger;
 
-        public CandidateController(CandidateRepository repositoryCandidate)
+        public CandidateController(CandidateRepository repositoryCandidate, ILogger<CandidateController> logger)
         {
+            _logger = logger;
             _repositoryCandidate = repositoryCandidate;
         }
 
@@ -30,6 +33,7 @@ namespace CaptaTecnologia.WebApi.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -51,6 +55,7 @@ namespace CaptaTecnologia.WebApi.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -74,6 +79,7 @@ namespace CaptaTecnologia.WebApi.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -93,6 +99,7 @@ namespace CaptaTecnologia.WebApi.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -113,6 +120,7 @@ namespace CaptaTecnologia.WebApi.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 return BadRequest(ex.Message);
             }
         }
