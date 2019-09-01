@@ -1,7 +1,7 @@
 # CaptaTecnologia
-Este projeto é um CRUD básico desenvolvido em Angular 7 + boostrap 4, contém login, back-end desenvolvido em .net core, web api.
+Este projeto é um CRUD básico desenvolvido em Angular 7 + boostrap 4, contém login, back-end desenvolvido em .net core, web api, etc.
 
-![Homepage WeatherNow](https://i.ibb.co/bQ9L2Hr/image.png)
+![Homepage WeatherNow](https://i.ibb.co/ftMgg60/image.png)
 
 ## Como o app funciona?
 Você deve rodar o script para criação do banco de dados, está na pasta DatabaseScript, após isto deve rodar o projeto Api e depois o projeto Web desenvolvido em Angular 7. Inicialmente irá se deparar com a tela de login, deve inserir o usuário admin e senha admin e clicar no botão de login. Pronto!!! Após isto você sera redirecionado para tela de crud.
@@ -28,7 +28,7 @@ Banco de dados
 1. Baixe o projeto em seu computador.
 2. Navegue até a pasta DatabaseScript, abra o script 1-Script_Create_Database_With_Schemas_And_Data.sql no Sql Server e execute.
 >
-![Script Inicial](https://i.ibb.co/nD71k1h/image.png)
+![Script Inicial](https://i.ibb.co/ftMgg60/image.png)
 >
 3. Após criado o banco de dados abra a solution que está na pasta CaptaTecnologia com visual studio.
 >
@@ -65,19 +65,15 @@ Banco de dados
 
 ## Preview
 
-1. Projeto rodando tela 1
+1. Tela 1
 >
-![Projeto Capta](https://i.ibb.co/bQ9L2Hr/image.png)
+![Projeto Capta](https://i.ibb.co/ftMgg60/image.png)
 >
-2. Projeto rodando tela 2
->
-![Projeto Capta](https://i.ibb.co/bQ9L2Hr/image.png)
->
-3. Projeto rodando tela 3
+2. Tela 2
 >
 ![Projeto Capta](https://i.ibb.co/zfpWPWd/image.png)
 >
-3. Projeto rodando tela 4
+3. Tela 3
 >
 ![Projeto Capta](https://i.ibb.co/5R4Jq9h/image.png)
 >
