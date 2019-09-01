@@ -1,10 +1,10 @@
-# CaptaTecnologia
-Este projeto é um CRUD básico desenvolvido em Angular 7 + boostrap 4, contém login, back-end desenvolvido em .net core, web api, etc.
+# O que é este projeto?
+Este projeto é um CRUD básico desenvolvido em Angular 7 + boostrap 4, contém autenticação, back-end desenvolvido em .net core, web api, etc.
 
-![Homepage WeatherNow](https://i.ibb.co/ftMgg60/image.png)
+![Homepage](https://i.ibb.co/ftMgg60/image.png)
 
-## Como o app funciona?
-Você deve rodar o script para criação do banco de dados, está na pasta DatabaseScript, após isto deve rodar o projeto Api e depois o projeto Web desenvolvido em Angular 7. Inicialmente irá se deparar com a tela de login, deve inserir o usuário admin e senha admin e clicar no botão de login. Pronto!!! Após isto você sera redirecionado para tela de crud.
+## Credenciais do login
+As credenciais para logar no sistema são: usuário => admin e senha => admin
 
 ## Tecnologias utilizadas
   O app foi desenvolvido utilizando no front:
