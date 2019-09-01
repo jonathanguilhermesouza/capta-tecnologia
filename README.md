@@ -52,7 +52,7 @@ Banco de dados
 >
 ![Script Inicial](https://i.ibb.co/PMtThSk/image.png)
 >
-7. Após o start na API, basta inicializar o projeto web (desenvolvido em angular). É preferível que utilize o Visual Studio Code pela sua facilidade em lidar com os frameworks JS. Na solution navegue e vá até o diretório CaptaTecnologia/CaptaTecnologia.Web/ClientApp, basta abrir o VS Code nesse caminho.
+7. Start a API no visual studio, depois basta inicializar o projeto web (desenvolvido em angular). É preferível que utilize o Visual Studio Code pela sua facilidade em lidar com os frameworks JS. Na solution navegue e vá até o diretório CaptaTecnologia/CaptaTecnologia.Web/ClientApp, basta abrir o VS Code nesse caminho.
 >
 ![VS Code](https://i.ibb.co/y07cMg2/image.png)
 >
