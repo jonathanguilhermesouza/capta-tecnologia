@@ -56,7 +56,7 @@ export class CandidateEditComponent implements OnInit {
       },
       err => {
         this.errors = 'Erro ao salvar';
-        this.toastr.error('Atualizado com sucesso', 'Sucesso');
+        this.toastr.error('Erro ao salvar candidato', 'Erro');
       }
     );
   }
