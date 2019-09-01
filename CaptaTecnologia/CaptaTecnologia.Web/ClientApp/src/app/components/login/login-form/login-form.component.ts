@@ -42,10 +42,13 @@ export class LoginFormComponent implements OnInit {
         this.router.navigateByUrl('/');
       },
       err => {
-        if (err.status == 400)
-          this.toastr.error('Usuário ou senha incorretos.', 'Autenticação');
+        console.log(err.status )
+        if (err.status == 0)
+          this.toastr.warning('Talvez a API não esteja online', 'Conexão');
+        else if (err.status == 400)
+          this.toastr.warning('Usuário ou senha incorretos.', 'Autenticação');
         else
-          console.log(err);
+          this.toastr.error('Ocorreu algum erro desconhecido', 'Erro');
       }
     );
   }

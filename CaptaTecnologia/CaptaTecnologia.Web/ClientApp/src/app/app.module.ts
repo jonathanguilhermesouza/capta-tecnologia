@@ -1,4 +1,5 @@
-import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
+//modules
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -7,9 +8,14 @@ import { RouterModule } from '@angular/router';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+//others
 import { AuthInterceptor } from 'src/app/authentication/interceptor';
-import { LoginService } from 'src/app/components/login/shared/login.service';
 import { Activate } from './authentication/activate';
+
+//services
+import { LoginService } from 'src/app/components/login/shared/login.service';
+
+//components
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { HomeComponent } from './components/home/home.component';
@@ -43,9 +49,7 @@ import { LoginFormComponent } from './components/login/login-form/login-form.com
       { path: 'candidate', component: CandidateComponent, canActivate:[Activate]},
       { path: 'candidate-edit/:id', component: CandidateEditComponent, canActivate:[Activate]},
       { path: 'candidate-create', component: CandidateCreateComponent, canActivate:[Activate]},
-      
-      { path: 'login', component: LoginComponent ,
-    children:[{ path: 'login-form', component: LoginFormComponent }]}
+      { path: 'login', component: LoginComponent}
     ]),
     ToastrModule.forRoot()
   ],
