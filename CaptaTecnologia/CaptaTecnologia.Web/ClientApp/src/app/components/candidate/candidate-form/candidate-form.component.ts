@@ -38,7 +38,6 @@ export class CandidateFormComponent implements OnInit {
     //select default gender
     this.candidate.genderCodigo = "F";
   }
-
  
   save(): void {
     this.function();
