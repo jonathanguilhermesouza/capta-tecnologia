@@ -48,7 +48,7 @@ Banco de dados
 >
 ![Update-database](https://i.ibb.co/J5WFZGk/image.png)
 >
-6. Caso ocorra tudo bem, navegue até a pasta DatabaseScript, abra o script 2-Script_Insert_Data_Table_User_And_Gender.sql no Sql Server e execute.
+6. Caso ocorra tudo bem, navegue até a pasta DatabaseScript, abra o script 1-Script_Insert_Data_Table_User_And_Gender.sql no Sql Server e execute.
 >
 ![Script Inicial](https://i.ibb.co/PMtThSk/image.png)
 >
