@@ -1,5 +1,5 @@
 //packages
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { FormGroup } from "@angular/forms";
 import { ToastrService } from 'ngx-toastr';
@@ -20,6 +20,7 @@ import { GenderService } from 'src/app/components/gender/shared/gender.service';
 })
 export class CandidateCreateComponent implements OnInit {
 
+  descriptionAction: string;
   candidate: Candidate;
   editForm: FormGroup;
   errors: string;
@@ -32,6 +33,7 @@ export class CandidateCreateComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
+    this.descriptionAction = 'Criar';
     this.candidate = new Candidate();
     this.genderService.refreshList();
 

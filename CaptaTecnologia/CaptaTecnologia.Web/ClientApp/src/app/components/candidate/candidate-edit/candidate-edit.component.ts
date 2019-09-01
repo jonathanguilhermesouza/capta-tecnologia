@@ -20,6 +20,7 @@ import { GenderService } from 'src/app/components/gender/shared/gender.service';
 })
 export class CandidateEditComponent implements OnInit {
 
+  descriptionAction: string;
   candidate: Candidate;
   editForm: FormGroup;
   errors: string;
@@ -35,6 +36,7 @@ export class CandidateEditComponent implements OnInit {
 
   ngOnInit() {
 
+    this.descriptionAction = 'Editar';
     this.candidate = new Candidate();
 
     this.route.params.subscribe(params => {
@@ -47,7 +49,6 @@ export class CandidateEditComponent implements OnInit {
   }
 
   putCandidate() {
-    console.log(this.candidate);
     this.candidateService.putCandidate(this.candidate).subscribe(
       candidate => {
         this.candidate = candidate;

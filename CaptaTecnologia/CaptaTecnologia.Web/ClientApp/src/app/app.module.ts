@@ -25,6 +25,7 @@ import { CandidateEditComponent } from './components/candidate/candidate-edit/ca
 import { CandidateCreateComponent } from './components/candidate/candidate-create/candidate-create.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginFormComponent } from './components/login/login-form/login-form.component';
+import { CandidateFormComponent } from './components/candidate/candidate-form/candidate-form.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { LoginFormComponent } from './components/login/login-form/login-form.com
     CandidateEditComponent,
     CandidateCreateComponent,
     LoginComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    CandidateFormComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
