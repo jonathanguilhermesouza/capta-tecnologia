@@ -1,0 +1,15 @@
+.content-margin {
+  margin-top: 50px
+}
+
+.header-style {
+  padding: 6px;
+  border-radius: 5px;
+  background: #525252;
+}
+
+.form-style {
+  padding: 30px;
+  border: 1px solid #bebebe;
+  border-top: none;
+}

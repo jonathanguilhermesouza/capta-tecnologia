@@ -1,0 +1,35 @@
+<div class="row content-margin">
+  <div class="col">
+    <div class="form-group">
+      <button (click)="onCreate()" class="btn btn-md btn-outline-primary">Novo candidato</button>
+    </div>
+  </div>
+</div>
+
+
+<table class="table table-hover">
+  <thead class="thead-dark ">
+    <tr>
+      <th scope="col" class="w-10">Id</th>
+      <th scope="col" class="w-20">Nome</th>
+      <th scope="col" class="w-50">Sobrenome</th>
+      <th scope="col" class="w-10">Sexo</th>
+      <th scope="col" class="w-10">Ações</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let candidate of service.list">
+    <td>{{candidate.id}}</td>
+    <td>{{candidate.name}}</td>
+    <td>{{candidate.lastName}}</td>
+    <td>{{candidate.genderCodigo}}</td>
+    <td>
+      <div class="btn-group mr-2" role="group">
+        <button (click)="onDelete(candidate.id)" class="btn btn-sm btn-secondary">Remover</button>
+      </div>
+      <div class="btn-group mr-2" role="group">
+        <button (click)="onEdit(candidate)" class="btn btn-sm btn-secondary">Editar</button>
+      </div>
+
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,18 @@
+<div class="flex-row d-flex justify-content-center text-center content-margin">
+  <form #form='ngForm' class="col-5 form-style" autocomplete="off" (submit)="onSubmit(form)">
+    <img src="../../../assets/img/nerd-user-icon.png" class="align-middle img-icon" />
+    <div class="form-group">
+      <label class="d-flex flex-row">Usuário</label>
+      <input placeholder="Digite admin" class="form-control" #UserName="ngModel" name="UserName" [(ngModel)]="formModel.UserName" required>
+    </div>
+    <div class="form-group">
+      <label class="d-flex flex-row">Senha</label>
+      <input placeholder="Digite admin" type="password" class="form-control" #Password="ngModel" name="Password" [(ngModel)]="formModel.Password" required>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-12">
+        <button type="submit" class="btn btn-lg btn-block btn-info" [disabled]="form.invalid">Login</button>
+      </div>
+    </div>
+  </form>
+</div>

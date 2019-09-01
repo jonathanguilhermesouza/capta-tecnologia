@@ -1,0 +1,47 @@
+<div>
+  <div class="header header-style content-margin">
+    <h4 class="title text-center text-light">Editar candidato</h4>
+  </div>
+  <div class="content">
+    <form class="form-style">
+      <div class="row">
+        <div class="col-4">
+          <div class="form-group">
+            <label>Nome</label>
+            <input [(ngModel)]="candidate.name" name="name" class="form-control" placeholder="digite o nome">
+          </div>
+        </div>
+
+        <div class="col-8">
+          <div class="form-group">
+            <label>Último nome</label>
+            <input [(ngModel)]="candidate.lastName" name="lastName" class="form-control" placeholder="digite o sobrenome">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div class="form-group">
+            <label>Sexo</label>
+            <select class="form-control" [(ngModel)]="candidate.genderCodigo" name="genderCodigo">
+              <option [ngValue]="0" disabled selected>-- Selecione --</option>
+              <option *ngFor="let gender of genderService.list" [value]="gender.codigo">{{gender.description}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col d-sm-inline-flex flex-sm-row-reverse">
+          <div class="form-group">
+            <button (click)="putCandidate()" class="btn btn-primary">
+              Salvar
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
